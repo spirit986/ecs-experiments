@@ -1,7 +1,7 @@
 data "aws_caller_identity" "current" {}
 locals {
     account_id = data.aws_caller_identity.current.account_id
-    enable_compute_module = true # depends on infra
+    enable_compute_module = false # depends on infra
     enable_ecs_ec2_module = false # depends on compute
 }
 
