@@ -1,0 +1,394 @@
+module.compute.module.ec2_sg.aws_security_group_rule.ingress_with_cidr_blocks[1]: Refreshing state... [id=sgrule-1271352742]
+module.ecs-ec2.aws_ecs_cluster.ecs_cluster: Refreshing state... [id=arn:aws:ecs:eu-north-1:867344461909:cluster/ecs_terraform_ec2]
+module.compute.aws_iam_instance_profile.ecs_agent: Refreshing state... [id=ecs-agent]
+module.compute.aws_iam_role_policy_attachment.ecs_agent: Refreshing state... [id=ecs-agent-20241217122054565600000001]
+module.compute.module.ec2_sg.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-4249686035]
+module.compute.module.ec2_sg.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-0e4e4c85510b11fd1]
+module.compute.aws_launch_template.ecs_cluster_asg_launch_template_spot: Refreshing state... [id=lt-058f34e88d10408b0]
+module.compute.aws_launch_template.ecs_cluster_asg_launch_template_freetier: Refreshing state... [id=lt-064f5bffad5cc47b5]
+module.compute.aws_autoscaling_group.ecs_cluster_ec2: Refreshing state... [id=ecs_terraform_ec2_asg20241217130022466400000005]
+module.compute.module.ec2_sg.aws_security_group_rule.egress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-1192362529]
+module.compute.aws_iam_role.ecs_agent: Refreshing state... [id=ecs-agent]
+module.compute.aws_key_pair.ecs: Refreshing state... [id=terraform-deployer-key]
+data.aws_caller_identity.current: Reading...
+aws_dynamodb_table.terraform_state_lock: Refreshing state... [id=ecs-experiments-tfstate-cc635-dynamodb]
+module.infra.aws_ecr_repository.nginx_ecr_repo: Refreshing state... [id=nginx]
+module.infra.module.ecs_vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0e39c31ade5255655]
+data.aws_caller_identity.current: Read complete after 0s [id=867344461909]
+module.infra.module.ecs_vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-01ef5f3ad4f7ce682]
+module.infra.module.ecs_vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-05820ec54dde76e0a]
+module.infra.module.ecs_vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0b21f848fd2854b47]
+module.infra.module.ecs_vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-036f9abdfe0843bf7]
+module.infra.module.ecs_vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0098fd1ebcd877704]
+module.infra.module.ecs_vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0d290e5042e68e05a]
+module.infra.module.ecs_vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0423daa704a250d83]
+module.infra.module.ecs_vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-04abf98c742b49440]
+module.infra.module.ecs_vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-0c8d16ef769bff989]
+module.infra.module.ecs_vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0d829bbbd04a98c8d]
+module.infra.module.ecs_vpc.aws_route_table.private[1]: Refreshing state... [id=rtb-048267967ebecc2f7]
+module.infra.module.ecs_vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-0c8d16ef769bff9891080289494]
+module.infra.module.ecs_vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0aac6106f1a72327a]
+module.infra.module.ecs_vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-03d30fba6fb2f1a9c]
+module.infra.module.ecs_vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-085365aad5ec5200f]
+module.infra.module.ecs_vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-02fae37ff32903a5b]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.compute.aws_autoscaling_group.ecs_cluster_ec2 will be destroyed
+  # (because aws_autoscaling_group.ecs_cluster_ec2 is not in configuration)
+  - resource "aws_autoscaling_group" "ecs_cluster_ec2" {
+      - arn                              = "arn:aws:autoscaling:eu-north-1:867344461909:autoScalingGroup:b1819b41-3645-4fb4-8d94-40e2068ba03a:autoScalingGroupName/ecs_terraform_ec2_asg20241217130022466400000005" -> null
+      - availability_zones               = [
+          - "eu-north-1a",
+          - "eu-north-1b",
+        ] -> null
+      - capacity_rebalance               = false -> null
+      - default_cooldown                 = 30 -> null
+      - default_instance_warmup          = 0 -> null
+      - desired_capacity                 = 2 -> null
+      - enabled_metrics                  = [] -> null
+      - force_delete                     = false -> null
+      - force_delete_warm_pool           = false -> null
+      - health_check_grace_period        = 300 -> null
+      - health_check_type                = "EC2" -> null
+      - id                               = "ecs_terraform_ec2_asg20241217130022466400000005" -> null
+      - ignore_failed_scaling_activities = false -> null
+      - load_balancers                   = [] -> null
+      - max_instance_lifetime            = 0 -> null
+      - max_size                         = 5 -> null
+      - metrics_granularity              = "1Minute" -> null
+      - min_size                         = 2 -> null
+      - name                             = "ecs_terraform_ec2_asg20241217130022466400000005" -> null
+      - name_prefix                      = "ecs_terraform_ec2_asg" -> null
+      - predicted_capacity               = 0 -> null
+      - protect_from_scale_in            = false -> null
+      - service_linked_role_arn          = "arn:aws:iam::867344461909:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling" -> null
+      - suspended_processes              = [] -> null
+      - target_group_arns                = [] -> null
+      - termination_policies             = [
+          - "OldestInstance",
+        ] -> null
+      - vpc_zone_identifier              = [
+          - "subnet-0098fd1ebcd877704",
+          - "subnet-0b21f848fd2854b47",
+        ] -> null
+      - wait_for_capacity_timeout        = "10m" -> null
+      - warm_pool_size                   = 0 -> null
+        # (4 unchanged attributes hidden)
+
+      - launch_template {
+          - id      = "lt-064f5bffad5cc47b5" -> null
+          - name    = "ecs_terraform_ec2_ecs_cluster20241217130016192200000001" -> null
+          - version = "$Latest" -> null
+        }
+
+      - tag {
+          - key                 = "Name" -> null
+          - propagate_at_launch = true -> null
+          - value               = "ecs_terraform_ec2" -> null
+        }
+    }
+
+  # module.compute.aws_iam_instance_profile.ecs_agent will be destroyed
+  # (because aws_iam_instance_profile.ecs_agent is not in configuration)
+  - resource "aws_iam_instance_profile" "ecs_agent" {
+      - arn         = "arn:aws:iam::867344461909:instance-profile/ecs-agent" -> null
+      - create_date = "2024-12-17T12:20:54Z" -> null
+      - id          = "ecs-agent" -> null
+      - name        = "ecs-agent" -> null
+      - path        = "/" -> null
+      - role        = "ecs-agent" -> null
+      - tags        = {} -> null
+      - tags_all    = {} -> null
+      - unique_id   = "AIPA4T4OCGBKTJ62Z5BNR" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.compute.aws_iam_role.ecs_agent will be destroyed
+  # (because aws_iam_role.ecs_agent is not in configuration)
+  - resource "aws_iam_role" "ecs_agent" {
+      - arn                   = "arn:aws:iam::867344461909:role/ecs-agent" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2024-12-17T12:20:53Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "ecs-agent" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "ecs-agent" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROA4T4OCGBKXNW3UUXTZ" -> null
+        # (3 unchanged attributes hidden)
+    }
+
+  # module.compute.aws_iam_role_policy_attachment.ecs_agent will be destroyed
+  # (because aws_iam_role_policy_attachment.ecs_agent is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "ecs_agent" {
+      - id         = "ecs-agent-20241217122054565600000001" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role" -> null
+      - role       = "ecs-agent" -> null
+    }
+
+  # module.compute.aws_key_pair.ecs will be destroyed
+  # (because aws_key_pair.ecs is not in configuration)
+  - resource "aws_key_pair" "ecs" {
+      - arn             = "arn:aws:ec2:eu-north-1:867344461909:key-pair/terraform-deployer-key" -> null
+      - fingerprint     = "66:d5:44:4e:af:4e:0b:c3:52:aa:88:23:8a:e8:72:cc" -> null
+      - id              = "terraform-deployer-key" -> null
+      - key_name        = "terraform-deployer-key" -> null
+      - key_pair_id     = "key-03e605ed0bed4232f" -> null
+      - key_type        = "rsa" -> null
+      - public_key      = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+7y2N3hAMLj6ppHupd3+3X6r4Tyo9pw9pl+fslhS2ZBvjyjBdGFRYo5IeJO7h9/+Ooz4r3GQ9SNJUEbfCj2W4jW5i1iQuqVUCynupA2XSI438poOneuQMWwGPpmeehgVFy7tzjsQmqKnqc6YuS+aKxOpbYddxkn7OOv1l0A6k45gvSokSFU0sNJ4EHRSIYk6phUx7AD6Wg3R/kBubTAS7oOZRsnU86/KspT6drcYMKhyXuPo5Ht0ojiM8ybz06GvqW+vJf3YBJwOWxXHki+tTZxpCTDsjF46M0C+QJY2IYnExPnqVGgCjwaF7rRtyF4Nss9GO65NLNUl/ED0BcOJ4g/w8SOvVRID7+6Tiz/N8E//07luAWjWgtOb1QYCCnlcmzyB3d7R4WFDluAstOPRY7zlLk5zHdlq3GM4e6frPM2EYCn9qzTzRpgoKooOY7HvVGIuXeaya44DzaHf0nQa0oIr3iCaD3LVloUTln3KYgnXAO5qhrPa3qy41D4e7aP0= tome.petkovski@scalefocus.com" -> null
+      - tags            = {} -> null
+      - tags_all        = {} -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.compute.aws_launch_template.ecs_cluster_asg_launch_template_freetier will be destroyed
+  # (because aws_launch_template.ecs_cluster_asg_launch_template_freetier is not in configuration)
+  - resource "aws_launch_template" "ecs_cluster_asg_launch_template_freetier" {
+      - arn                                  = "arn:aws:ec2:eu-north-1:867344461909:launch-template/lt-064f5bffad5cc47b5" -> null
+      - default_version                      = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - id                                   = "lt-064f5bffad5cc47b5" -> null
+      - image_id                             = "ami-0ebd765ce17de788a" -> null
+      - instance_type                        = "t3.micro" -> null
+      - key_name                             = "terraform-deployer-key" -> null
+      - latest_version                       = 1 -> null
+      - name                                 = "ecs_terraform_ec2_ecs_cluster20241217130016192200000001" -> null
+      - name_prefix                          = "ecs_terraform_ec2_ecs_cluster" -> null
+      - security_group_names                 = [] -> null
+      - tags                                 = {} -> null
+      - tags_all                             = {} -> null
+      - user_data                            = "IyEvYmluL2Jhc2gKZWNobyBFQ1NfQ0xVU1RFUj1lY3NfdGVycmFmb3JtX2VjMiA+PiAvZXRjL2Vjcy9lY3MuY29uZmlnCg==" -> null
+      - vpc_security_group_ids               = [] -> null
+        # (5 unchanged attributes hidden)
+
+      - iam_instance_profile {
+          - arn  = "arn:aws:iam::867344461909:instance-profile/ecs-agent" -> null
+            name = null
+        }
+
+      - network_interfaces {
+          - associate_public_ip_address  = "true" -> null
+          - device_index                 = 0 -> null
+          - ipv4_address_count           = 0 -> null
+          - ipv4_addresses               = [] -> null
+          - ipv4_prefix_count            = 0 -> null
+          - ipv4_prefixes                = [] -> null
+          - ipv6_address_count           = 0 -> null
+          - ipv6_addresses               = [] -> null
+          - ipv6_prefix_count            = 0 -> null
+          - ipv6_prefixes                = [] -> null
+          - network_card_index           = 0 -> null
+          - security_groups              = [
+              - "sg-0e4e4c85510b11fd1",
+            ] -> null
+            # (8 unchanged attributes hidden)
+        }
+    }
+
+  # module.compute.aws_launch_template.ecs_cluster_asg_launch_template_spot will be destroyed
+  # (because aws_launch_template.ecs_cluster_asg_launch_template_spot is not in configuration)
+  - resource "aws_launch_template" "ecs_cluster_asg_launch_template_spot" {
+      - arn                                  = "arn:aws:ec2:eu-north-1:867344461909:launch-template/lt-058f34e88d10408b0" -> null
+      - default_version                      = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - id                                   = "lt-058f34e88d10408b0" -> null
+      - image_id                             = "ami-0ebd765ce17de788a" -> null
+      - instance_type                        = "t3.medium" -> null
+      - key_name                             = "terraform-deployer-key" -> null
+      - latest_version                       = 1 -> null
+      - name                                 = "ecs_terraform_ec2_ecs_cluster_spot20241217130016713700000003" -> null
+      - name_prefix                          = "ecs_terraform_ec2_ecs_cluster_spot" -> null
+      - security_group_names                 = [] -> null
+      - tags                                 = {} -> null
+      - tags_all                             = {} -> null
+      - user_data                            = "IyEvYmluL2Jhc2gKZWNobyBFQ1NfQ0xVU1RFUj1lY3NfdGVycmFmb3JtX2VjMiA+PiAvZXRjL2Vjcy9lY3MuY29uZmlnCg==" -> null
+      - vpc_security_group_ids               = [] -> null
+        # (5 unchanged attributes hidden)
+
+      - iam_instance_profile {
+          - arn  = "arn:aws:iam::867344461909:instance-profile/ecs-agent" -> null
+            name = null
+        }
+
+      - instance_market_options {
+          - market_type = "spot" -> null
+
+          - spot_options {
+              - block_duration_minutes         = 0 -> null
+              - instance_interruption_behavior = "terminate" -> null
+              - max_price                      = "0.0147" -> null
+              - spot_instance_type             = "one-time" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+
+      - network_interfaces {
+          - associate_public_ip_address  = "true" -> null
+          - device_index                 = 0 -> null
+          - ipv4_address_count           = 0 -> null
+          - ipv4_addresses               = [] -> null
+          - ipv4_prefix_count            = 0 -> null
+          - ipv4_prefixes                = [] -> null
+          - ipv6_address_count           = 0 -> null
+          - ipv6_addresses               = [] -> null
+          - ipv6_prefix_count            = 0 -> null
+          - ipv6_prefixes                = [] -> null
+          - network_card_index           = 0 -> null
+          - security_groups              = [
+              - "sg-0e4e4c85510b11fd1",
+            ] -> null
+            # (8 unchanged attributes hidden)
+        }
+    }
+
+  # module.compute.module.ec2_sg.aws_security_group.this_name_prefix[0] will be destroyed
+  # (because aws_security_group.this_name_prefix is not in configuration)
+  - resource "aws_security_group" "this_name_prefix" {
+      - arn                    = "arn:aws:ec2:eu-north-1:867344461909:security-group/sg-0e4e4c85510b11fd1" -> null
+      - description            = "Security Group managed by Terraform" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "Egress Rule"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0e4e4c85510b11fd1" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "http port"
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "ssh port"
+              - from_port        = 22
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 22
+            },
+        ] -> null
+      - name                   = "ec2_sg-20241217122247239500000001" -> null
+      - name_prefix            = "ec2_sg-" -> null
+      - owner_id               = "867344461909" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "ec2_sg"
+        } -> null
+      - tags_all               = {
+          - "Name" = "ec2_sg"
+        } -> null
+      - vpc_id                 = "vpc-0e39c31ade5255655" -> null
+
+      - timeouts {
+          - create = "10m" -> null
+          - delete = "15m" -> null
+        }
+    }
+
+  # module.compute.module.ec2_sg.aws_security_group_rule.egress_with_cidr_blocks[0] will be destroyed
+  # (because aws_security_group_rule.egress_with_cidr_blocks is not in configuration)
+  - resource "aws_security_group_rule" "egress_with_cidr_blocks" {
+      - cidr_blocks            = [
+          - "0.0.0.0/0",
+        ] -> null
+      - description            = "Egress Rule" -> null
+      - from_port              = 0 -> null
+      - id                     = "sgrule-1192362529" -> null
+      - protocol               = "-1" -> null
+      - security_group_id      = "sg-0e4e4c85510b11fd1" -> null
+      - security_group_rule_id = "sgr-0718a470652748b53" -> null
+      - self                   = false -> null
+      - to_port                = 0 -> null
+      - type                   = "egress" -> null
+    }
+
+  # module.compute.module.ec2_sg.aws_security_group_rule.ingress_with_cidr_blocks[0] will be destroyed
+  # (because aws_security_group_rule.ingress_with_cidr_blocks is not in configuration)
+  - resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      - cidr_blocks            = [
+          - "0.0.0.0/0",
+        ] -> null
+      - description            = "http port" -> null
+      - from_port              = 80 -> null
+      - id                     = "sgrule-4249686035" -> null
+      - protocol               = "tcp" -> null
+      - security_group_id      = "sg-0e4e4c85510b11fd1" -> null
+      - security_group_rule_id = "sgr-0d9e0f85cc9495d55" -> null
+      - self                   = false -> null
+      - to_port                = 80 -> null
+      - type                   = "ingress" -> null
+    }
+
+  # module.compute.module.ec2_sg.aws_security_group_rule.ingress_with_cidr_blocks[1] will be destroyed
+  # (because aws_security_group_rule.ingress_with_cidr_blocks is not in configuration)
+  - resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      - cidr_blocks            = [
+          - "0.0.0.0/0",
+        ] -> null
+      - description            = "ssh port" -> null
+      - from_port              = 22 -> null
+      - id                     = "sgrule-1271352742" -> null
+      - protocol               = "tcp" -> null
+      - security_group_id      = "sg-0e4e4c85510b11fd1" -> null
+      - security_group_rule_id = "sgr-035a06d5aa75b19d9" -> null
+      - self                   = false -> null
+      - to_port                = 22 -> null
+      - type                   = "ingress" -> null
+    }
+
+Plan: 0 to add, 0 to change, 11 to destroy.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: plan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "plan"

@@ -1,0 +1,32 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "ecs-experiments/infra/",
+            "badge": "💦"
+        },
+        {
+            "folderPath": "ecs-experiments/ecs-ec2/",
+            "badge": "🍑"
+        },
+        {
+            "folderPath": "ecs-experiments/ecs-fargate/",
+            "badge": "🍆"
+        },
+        {
+            "folderPath": "ecs-experiments/main.tf/",
+            "badge": "🍌"
+        },
+        {
+            "folderPath": "ecs-experiments/prereqs/",
+            "badge": "☕"
+        },
+        {
+            "folderPath": "ecs-experiments/compute/",
+            "badge": "🍺"
+        },
+        {
+            "folderPath": "ecs-experiments/variables.tf/",
+            "badge": "🍌"
+        }
+    ]
+}
