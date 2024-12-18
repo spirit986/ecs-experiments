@@ -1,6 +1,9 @@
 # AWS
 secrets*
 
+# Hide terrafrom plan
+plan*
+.plan*
 
 # Local .terraform directories
 **/.terraform/*
