@@ -5,6 +5,9 @@ secrets*
 plan*
 .plan*
 
+#Hide anything labeled with temp
+*temp*
+
 # Local .terraform directories
 **/.terraform/*
 
