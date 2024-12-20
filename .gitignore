@@ -8,6 +8,11 @@ plan*
 #Hide anything labeled with temp
 *temp*
 
+## .vscode
+.vscode*
+.vscode/*
+.vscode/settings.json
+
 # Local .terraform directories
 **/.terraform/*
 
