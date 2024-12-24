@@ -27,6 +27,18 @@
         {
             "folderPath": "ecs-experiments/variables.tf/",
             "badge": "🍌"
+        },
+        {
+            "folderPath": "ecs-experiments/services/nginx-simple/",
+            "badge": "🍚"
+        },
+        {
+            "folderPath": "ecs-experiments/services/nginx-fargate-simple/",
+            "badge": "🍚"
+        },
+        {
+            "folderPath": "ecs-experiments/outputs.tf/",
+            "badge": "🍌"
         }
     ]
 }

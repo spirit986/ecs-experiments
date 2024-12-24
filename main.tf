@@ -3,7 +3,7 @@ locals {
     account_id = data.aws_caller_identity.current.account_id
     enable_compute_module = false # depends on infra
     enable_ecs_ec2_module = false # depends on compute
-    enable_ecs_fargate_module = true # depends on infra
+    enable_service_nginx_fargate1 = true # depends on infra
 }
 
 module "infra" {
@@ -22,8 +22,8 @@ module "ecs-ec2" {
     depends_on = [ module.compute ]
 }
 
-module "ecs-fargate" {
-    source = "./ecs-fargate"
-    count = local.enable_ecs_fargate_module ? 1 : 0
+module "service_nginx_fargate1" {
+    source = "./services/nginx-fargate-simple"
+    count = local.enable_service_nginx_fargate1 ? 1 : 0
     depends_on = [ module.infra ]
 }
