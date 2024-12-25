@@ -53,10 +53,10 @@ jobs:
         run: |
           aws sts get-caller-identity
 
-      - name: Unset the credentials
-        uses: aws-actions/configure-aws-credentials@v4.0.2
-        with:
-          aws-region: ${{ vars.AWS_REGION }}
-          unset-current-credentials: true
+      # - name: Unset the credentials
+      #   uses: aws-actions/configure-aws-credentials@v4.0.2
+      #   with:
+      #     aws-region: ${{ vars.AWS_REGION }}
+      #     unset-current-credentials: true
 
 
