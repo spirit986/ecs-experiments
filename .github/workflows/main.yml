@@ -1,9 +1,9 @@
 name: CI
 
 on:
-  # Trigger on push/pull from master
-  push:
-    branches: [ "master" ]
+  # # Trigger on push/pull from master
+  # push:
+  #   branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
