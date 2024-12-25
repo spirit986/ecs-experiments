@@ -27,11 +27,23 @@ output "nginx_ecr_repo_login_details" {
 > export MY_AWS_ACCOUNT=$(aws --output=json sts get-caller-identity | jq -r .Account) && echo $MY_AWS_ACCOUNT
 > export MY_AWS_REGION=$(aws configure get default.region) && echo $MY_AWS_REGION
 > docker pull nginx
-> docker tag nginx:latest $MY_AWS_ACCOUNT.dkr.ecr.$MY_AWS_REGION.amazonaws.com/${local.ecr_repo_name}:latest
+> docker tag nginx:latest $MY_AWS_ACCOUNT.dkr.ecr.$MY_AWS_REGION.amazonaws.com/${var.ecr_repo_name}:latest
 > aws ecr get-login-password --region $MY_AWS_REGION | docker login --username AWS --password-stdin $MY_AWS_ACCOUNT.dkr.ecr.$MY_AWS_REGION.amazonaws.com
-> docker push $MY_AWS_ACCOUNT.dkr.ecr.$MY_AWS_REGION.amazonaws.com/${local.ecr_repo_name}:latest
+> docker push $MY_AWS_ACCOUNT.dkr.ecr.$MY_AWS_REGION.amazonaws.com/${var.ecr_repo_name}:latest
 EOT
 }
 
+output "nginx_ecr_repository_url" {
+    value = aws_ecr_repository.nginx_ecr_repo.repository_url
+}
 
+output "ecs_cluster_ecs1_name" {
+    value = aws_ecs_cluster.ecs1.name
+}
+output "ecs_cluster_ecs1_id" {
+    value = aws_ecs_cluster.ecs1.id
+}
+output "ecs_task_execution_role_arn" {
+    value = aws_iam_role.ecs_task_execution_role.arn
+}
 

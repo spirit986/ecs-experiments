@@ -12,7 +12,7 @@ locals {
     aws_region = data.terraform_remote_state.vpc.outputs.aws_region
     service_port = 80
     ssh_port = 22
-    task_def_name = "ec2-ecs"
+    task_def_name = "ecs-ec2"
 
     common_tags = {
       Project = "TerraformECS"
