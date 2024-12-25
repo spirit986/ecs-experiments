@@ -2,7 +2,7 @@
 secrets*
 
 # Hide terrafrom plan
-plan*
+plan.*
 .plan*
 
 #Hide anything labeled with temp
